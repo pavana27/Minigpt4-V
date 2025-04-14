@@ -1,0 +1,13 @@
+datasets:
+  sed:  # Dataset name: 
+    data_type: images  # Input data type is image frames extracted from videos
+
+    build_info:  # Contains paths and metadata required to build the dataset
+      ann_paths: [/home/pavana/ieee_fer_dpo/sed_captions/train_val_filter_cap.json]  # Training/validation annotation file
+      vis_root: /home/pavana/sed/dataset/train_val/videos  # Directory for training/validation videos
+      subtitles_path: /home/pavana/  # Directory containing subtitle files (if applicable)
+      model_name: 'mistral'  # Language model used (e.g., mistral, llama2)
+      vis_root_val: /home/pavana/sed/dataset/val/videos  # Directory for validation videos
+      ann_paths_val: [/home/pavana/sed_captions/val_filter_cap.json]  # Validation annotation file
+      questions_path: /home/pavana/prompts/sed_questions.txt  # Path to predefined question prompts
+      instruction_prompts: /home/pavana/prompts/instruction_align.txt  # Path to instruction alignment prompts
